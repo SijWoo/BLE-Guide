@@ -78,7 +78,9 @@ main.o: ../main.c ../init_mcu.h ../init_board.h ../init_app.h \
  ../hal-config.h \
  C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\hardware\kit\common\halconfig/bsphalconfig.h \
  C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\hardware\kit\common\bsp/bsp_bcp.h \
- ../app.h
+ ../app.h \
+ C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\hardware\kit\common\drivers/retargetserial.h \
+ C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\hardware\kit\common\halconfig/retargetserialhalconfig.h
 
 ../init_mcu.h:
 
@@ -247,3 +249,7 @@ C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\hardware\kit\common\halc
 C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\hardware\kit\common\bsp/bsp_bcp.h:
 
 ../app.h:
+
+C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\hardware\kit\common\drivers/retargetserial.h:
+
+C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\hardware\kit\common\halconfig/retargetserialhalconfig.h:

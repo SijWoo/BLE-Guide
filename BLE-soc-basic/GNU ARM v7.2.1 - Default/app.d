@@ -75,7 +75,10 @@ app.o: ../app.c \
  C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\protocol\bluetooth\ble_stack\inc\common/bg_errorcodes.h \
  ../gatt_db.h \
  C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\protocol\bluetooth\ble_stack\inc\common/bg_gattdb_def.h \
- ../app.h .././user/em_adc.h
+ ../app.h \
+ C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\hardware\kit\common\drivers/retargetserial.h \
+ C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\hardware\kit\common\halconfig/retargetserialhalconfig.h \
+ .././user/em_adc.h
 
 C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\protocol\bluetooth\ble_stack\inc\common/bg_types.h:
 
@@ -230,5 +233,9 @@ C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\protocol\bluetooth\ble_s
 C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\protocol\bluetooth\ble_stack\inc\common/bg_gattdb_def.h:
 
 ../app.h:
+
+C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\hardware\kit\common\drivers/retargetserial.h:
+
+C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\hardware\kit\common\halconfig/retargetserialhalconfig.h:
 
 .././user/em_adc.h:
