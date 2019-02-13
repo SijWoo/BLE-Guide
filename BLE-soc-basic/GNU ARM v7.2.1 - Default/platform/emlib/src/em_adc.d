@@ -1,10 +1,5 @@
-app.o: ../app.c \
- C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\protocol\bluetooth\ble_stack\inc\common/bg_types.h \
- C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\protocol\bluetooth\ble_stack\inc\soc/native_gecko.h \
- C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic/hal-config.h \
- C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic/board_features.h \
- C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic/ble-configuration.h \
- C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\hardware\kit\BGM13_BRD4305A\config/hal-config-board.h \
+platform/emlib/src/em_adc.o: ../platform/emlib/src/em_adc.c \
+ C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\emlib\inc/em_adc.h \
  C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\Device\SiliconLabs\BGM13\Include/em_device.h \
  C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\Device\SiliconLabs\BGM13\Include/bgm13s32f512ga.h \
  C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\CMSIS\Include/core_cm4.h \
@@ -59,39 +54,13 @@ app.o: ../app.c \
  C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\Device\SiliconLabs\BGM13\Include/bgm13_dmareq.h \
  C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\Device\SiliconLabs\BGM13\Include/bgm13_af_ports.h \
  C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\Device\SiliconLabs\BGM13\Include/bgm13_af_pins.h \
- C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\halconfig\inc\hal-config/hal-config-types.h \
- C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\emlib\inc/em_gpio.h \
- C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\emlib\inc/em_bus.h \
  C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\emlib\inc/em_assert.h \
- C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\hardware\module\config/sl_module.h \
- C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\hardware\module\config/sl_module_bgm13s32f512ga.h \
  C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\emlib\inc/em_cmu.h \
- C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\emlib\inc/em_gpio.h \
- C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\emlib\inc/em_emu.h \
- C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic/hal-config-app-common.h \
- C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\protocol\bluetooth\ble_stack\inc\common/gecko_configuration.h \
- C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\protocol\bluetooth\ble_stack\inc\common/bg_gattdb_def.h \
- C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\protocol\bluetooth\ble_stack\inc\common/bg_types.h \
- C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\protocol\bluetooth\ble_stack\inc\common/bg_errorcodes.h \
- ../gatt_db.h \
- C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\protocol\bluetooth\ble_stack\inc\common/bg_gattdb_def.h \
- ../app.h \
- C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\hardware\kit\common\drivers/retargetserial.h \
- C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\hardware\kit\common\halconfig/retargetserialhalconfig.h \
- C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\emlib\inc/em_adc.h \
- C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\emlib\inc/em_usart.h
+ C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\emlib\inc/em_assert.h \
+ C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\emlib\inc/em_bus.h \
+ C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\emlib\inc/em_gpio.h
 
-C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\protocol\bluetooth\ble_stack\inc\common/bg_types.h:
-
-C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\protocol\bluetooth\ble_stack\inc\soc/native_gecko.h:
-
-C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic/hal-config.h:
-
-C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic/board_features.h:
-
-C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic/ble-configuration.h:
-
-C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\hardware\kit\BGM13_BRD4305A\config/hal-config-board.h:
+C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\emlib\inc/em_adc.h:
 
 C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\Device\SiliconLabs\BGM13\Include/em_device.h:
 
@@ -201,44 +170,12 @@ C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\Device\SiliconL
 
 C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\Device\SiliconLabs\BGM13\Include/bgm13_af_pins.h:
 
-C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\halconfig\inc\hal-config/hal-config-types.h:
-
-C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\emlib\inc/em_gpio.h:
-
-C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\emlib\inc/em_bus.h:
-
 C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\emlib\inc/em_assert.h:
-
-C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\hardware\module\config/sl_module.h:
-
-C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\hardware\module\config/sl_module_bgm13s32f512ga.h:
 
 C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\emlib\inc/em_cmu.h:
 
+C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\emlib\inc/em_assert.h:
+
+C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\emlib\inc/em_bus.h:
+
 C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\emlib\inc/em_gpio.h:
-
-C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\emlib\inc/em_emu.h:
-
-C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic/hal-config-app-common.h:
-
-C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\protocol\bluetooth\ble_stack\inc\common/gecko_configuration.h:
-
-C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\protocol\bluetooth\ble_stack\inc\common/bg_gattdb_def.h:
-
-C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\protocol\bluetooth\ble_stack\inc\common/bg_types.h:
-
-C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\protocol\bluetooth\ble_stack\inc\common/bg_errorcodes.h:
-
-../gatt_db.h:
-
-C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\protocol\bluetooth\ble_stack\inc\common/bg_gattdb_def.h:
-
-../app.h:
-
-C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\hardware\kit\common\drivers/retargetserial.h:
-
-C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\hardware\kit\common\halconfig/retargetserialhalconfig.h:
-
-C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\emlib\inc/em_adc.h:
-
-C:\Users\Sijin\Documents\SiLabs\BLE-Guide\BLE-soc-basic\platform\emlib\inc/em_usart.h:

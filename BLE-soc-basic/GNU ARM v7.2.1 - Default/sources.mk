@@ -25,5 +25,4 @@ platform/Device/SiliconLabs/BGM13/Source \
 platform/emdrv/sleep/src \
 platform/emlib/src \
 protocol/bluetooth/lib/EFR32BG13P/GCC \
-user \
 

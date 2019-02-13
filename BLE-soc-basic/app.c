@@ -26,7 +26,8 @@
 
 #include "app.h"
 
-#include "./user/em_adc.h"
+#include "em_adc.h"
+#include "em_usart.h"
 
 /* Print boot message */
 static void bootMessage(struct gecko_msg_system_boot_evt_t *bootevt);
@@ -54,6 +55,10 @@ void appMain(gecko_configuration_t *pconfig)
   ADC_InitStruct.negSel = adcNegSelVSS;
   CMU_ClockEnable(cmuClock_ADC0, true);
 
+  /* Initialize UART */
+  USART_InitAsync_TypeDef UART_InitStruct = USART_INITASYNC_DEFAULT;
+  CMU_ClockEnable(cmuClock_USART0, true);
+
   /* Initialize stack */
   gecko_init(pconfig);
 
@@ -68,7 +73,7 @@ void appMain(gecko_configuration_t *pconfig)
     }
 
     /* Check for stack event. This is a blocking event listener. If you want non-blocking please see UG136. */
-    evt = gecko_wait_event();
+    evt = gecko_peek_event();		// Originally: evt = gecko_wait_event();
 
     /* Handle events */
     switch (BGLIB_MSG_ID(evt->header)) {
