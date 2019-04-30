@@ -19,6 +19,7 @@ extern const struct bg_gattdb_def bg_gattdb_data;
 #define gattdb_device_name                     11
 #define gattdb_ota_control                     23
 #define gattdb_board_voltage                   26
-#define gattdb_board_voltage_notification         28
+#define gattdb_voltage_descriptor              28
+#define gattdb_board_voltage_notification         30
 
 #endif

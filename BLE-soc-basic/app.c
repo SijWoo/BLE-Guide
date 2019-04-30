@@ -50,14 +50,12 @@ void appMain(gecko_configuration_t *pconfig)
   uint16_t boardVoltage;
   ADC_InitSingle_TypeDef ADC_InitStruct = ADC_INITSINGLE_DEFAULT;
   ADC_InitStruct.acqTime = adcAcqTime16;
-  ADC_InitStruct.reference = adcRef5VDIFF;
-  ADC_InitStruct.posSel = adcPosSelAVDD;
-  ADC_InitStruct.negSel = adcNegSelVSS;
+  ADC_InitStruct.reference = adcRefVDD;
+  ADC_InitStruct.posSel = adcPosSelAPORT3YCH9;
+  //ADC_InitStruct.negSel = adcNegSelVSS;
+  //ADC_InitStruct.prsSel = adcPRSSELCh9;
+  //ADC_InitStruct.prsSel = adcPRSSELCh0;
   CMU_ClockEnable(cmuClock_ADC0, true);
-
-  /* Initialize UART */
-  USART_InitAsync_TypeDef UART_InitStruct = USART_INITASYNC_DEFAULT;
-  CMU_ClockEnable(cmuClock_USART0, true);
 
   /* Initialize stack */
   gecko_init(pconfig);
@@ -73,7 +71,7 @@ void appMain(gecko_configuration_t *pconfig)
     }
 
     /* Check for stack event. This is a blocking event listener. If you want non-blocking please see UG136. */
-    evt = gecko_peek_event();		// Originally: evt = gecko_wait_event();
+    evt = gecko_wait_event();		// Originally: evt = gecko_wait_event();
 
     /* Handle events */
     switch (BGLIB_MSG_ID(evt->header)) {
@@ -98,7 +96,7 @@ void appMain(gecko_configuration_t *pconfig)
 
       case gecko_evt_le_connection_opened_id:
         printLog("connection opened\r\n");
-        gecko_cmd_hardware_set_soft_timer(32768, 0, 0);
+        gecko_cmd_hardware_set_soft_timer(32768, 0, 0);	// start software timer
         break;
 
       case gecko_evt_hardware_soft_timer_id:
@@ -106,12 +104,17 @@ void appMain(gecko_configuration_t *pconfig)
     	ADC_Start(ADC0, adcStartSingle);
     	while((ADC_IntGet(ADC0) & ADC_IF_SINGLE) != ADC_IF_SINGLE);
     	ADCdata = ADC_DataSingleGet(ADC0);
-    	boardVoltage = (uint16_t)(ADCdata * 5000 / 4096);
-    	printLog("voltage: %d mV\r\n",boardVoltage);
+    	boardVoltage = (uint16_t)(ADCdata * 3300 / 4096);
+    	printLog("data: %d, voltage: %d mV\r\n", ADCdata, boardVoltage);
 
-    	boardVoltage = ((boardVoltage & 0x00FF) << 8) | ((boardVoltage & 0xFF00) >> 8);
+    	//boardVoltage = ((boardVoltage & 0x00FF) << 8) | ((boardVoltage & 0xFF00) >> 8);
     	gecko_cmd_gatt_server_write_attribute_value(gattdb_board_voltage, 0, 2, (const uint8*)&boardVoltage);
-    	gecko_cmd_gatt_server_send_characteristic_notification(0xFF, gattdb_board_voltage_notification, 2, (const uint8*)&boardVoltage);
+    	gecko_cmd_gatt_server_send_characteristic_notification(0xFF, gattdb_board_voltage, 2, (const uint8*)&boardVoltage);
+    	gecko_cmd_gatt_write_descriptor_value(0xFF, gattdb_voltage_descriptor, 2, (const uint8*)&boardVoltage);
+    	uint8_t glucose_flags = 0x02;
+    	//uint16_t glucose_concentration = FLT_TO_UINT16((uint16_t)(ADCdata * 3300 / 4096), -3);
+    	//gecko_cmd_gatt_server_write_attribute_value(gattdb_glucose_measurement, )
+
     	break;
 
       case gecko_evt_le_connection_closed_id:

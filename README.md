@@ -1,13 +1,13 @@
 # BLE-Guide
 
-This guide holds what I learn about BLE. It uses Silicon Lab's BGM13P Module.
+This guide holds what I learn about BLE. It uses Silicon Lab's BGM13 Module.
 
 ## Quick Guide
-The server-client is the basic name conventions for any BLE device. The server measures and holds the data which a client will read. A peripheral (BGM13P) device is usually the server and a phone is the client for which to monitor the data.
+The server-client is the basic naming convention for BLE devices. The server measures and holds the data which a client will read. A peripheral (BGM13) device is usually the server and a phone is the client for which to monitor the data.
 
 A Generic Attribute Profile (GATT) database must be created before run-time. This cannot be changed once compiled (excluding the data fields). You can think of this as a table where each GATT attribute corresponds to a data field.
 
-With the Bluetooth SDK that Silicon Labs provides, you can easily create the database in the .isc file. It's a simple drag and drop from the left to right column. To have custom ones, look in later section to learn more. Choose what kind of GATT fields you want the client to see.
+With the Bluetooth SDK that Silicon Labs provides, you can easily create the database in the .isc file. It's a simple drag and drop from the left to right column. To have custom ones, look in the later section to learn more. Choose what kind of GATT fields you want the client to see.
 
 Once you finish the GATT database, you can use the following function in native_gecko.h to update the data field to a corresponding GATT attribute:
 
@@ -20,7 +20,7 @@ Download Silicon Lab's Blue Gecko App to connect the board to your phone and mon
 For a step by step guide, look at the "Getting Started with Bluetooth SDK" document.
 
 ## GATT Attributes
-
+Each GATT has a Universally Unique ID (UUID). The UUID is for clients to know which GATT attribute is available from the server. This UUID is usually represented as a string. The example service I created has a UUID of "549dd661-60b6-4970-98b8-9b105673539e".
 
 ## BLE-soc-basic
 This the first project where I test BLE. I followed the "Getting Started..." guide to create one. The .isc file is where you customize and create the GATT database of your device. I created the "MyVoltageService" that holds a 2 byte data field where the voltage of the board can be read. The ID of the characteristic settings needs to be checked and named in order to create a macro definition. I change the ID to be board_voltage which created a gattdb_board_voltage definition. I called the following function in app.c:
@@ -30,7 +30,7 @@ This the first project where I test BLE. I followed the "Getting Started..." gui
 The offset = 0 and the length of the data = 2 which is 2 bytes. The ADCdata variable holds the voltage of the board. This functions writes the data to the associated GATT attribute for a phone to read.
 
 ### Blocking vs non-Blocking
-In app.c, the basis of the while loop is a gigantic switch statement that handles different events. The evt variable (struct gecko_cmd_packet* evt) holds the event type to switch between cases. In the default example code, 
+In app.c, the basis of the while loop is a gigantic switch statement that handles different events. The evt variable (struct gecko_cmd_packet* evt) holds the event type for the case condition. In the default example code, 
 
 	evt = gecko_wait_event();
 
