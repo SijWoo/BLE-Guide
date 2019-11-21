@@ -3,7 +3,7 @@
 This guide holds what I learn about BLE. It uses Silicon Lab's BGM13 Module.
 
 ## Quick Guide
-The server-client is the basic naming convention for BLE devices. The server measures and holds the data which a client will read. A peripheral (BGM13) device is usually the server and a phone is the client for which to monitor the data.
+The server-client is the basic naming convention for BLE devices. The server measures and holds the data which a client will read the data. A peripheral (BGM13) device is usually the server and a phone is the client for which to monitor the data.
 
 A Generic Attribute Profile (GATT) database must be created before run-time. This cannot be changed once compiled (excluding the data fields). You can think of this as a table where each GATT attribute corresponds to a data field.
 
